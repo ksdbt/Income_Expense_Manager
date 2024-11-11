@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #dfe6e9;
+    display: grid;
+    place-items: center;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Styles */
+h2, h3, h4 {
+    text-align: center;
+}
+
+/* Auth Section */
+.auth {
+    padding: 20px;
+}
+
+.form-control {
+    margin: 10px 0;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button Styles */
+.btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#logout-btn{
+   width:500px;
+   margin-right: 10px;
+    margin-left: 10px;
+}
+
+.btn:hover {
+    background: #218838;
+}
+
+/* Ledger Section */
+.ledger {
+    display: none; /* Initially hidden */
+    background-color: #2f3542;
+    color: white;
+    padding: 20px;
+}
+
+.ledger h2 {
+    text-transform: uppercase;
+    color: #feca57;
+}
+
+.ledger h2, .ledger h4, .ledger h1 {
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+/* Income and Expense Container */
+.inc-exp-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.inc-exp-container div {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: 18px;
+    flex: 1 1 45%;
+    border-radius: 2px;
+}
+
+.inc-exp-container div p {
+    font-size: 22px;
+}
+
+.inc {
+    border: 3px solid #1dd1a1;
+    color: #1dd1a1;
+    margin: 10px;
+}
+
+.exp {
+    border: 3px solid #ee5253;
+    color: #ee5253;
+    margin: 10px;
+}
+
+/* Transaction Form */
+#form {
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Transaction List */
+.transaction {
+    margin-top: 20px;
+}
+
+.transaction ul {
+    list-style: none;
+    padding: 0;
+}
+
+.transaction li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.transaction li .delete-btn {
+    background: transparent;
+    border: none;
+    color: red;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.transaction li .delete-btn:hover {
+    color: darkred;
+}
+
+/* Balance Display */
+#balance {
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Canvas for Chart */
+canvas {
+    margin-top: 20px;
+    background-color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .inc-exp-container {
+        flex-direction: column; /* Stack income and expense vertically */
+    }
+
+    .inc-exp-container div {
+        flex: 1 1 100%; /* Full width on smaller screens */
+    }
+}
